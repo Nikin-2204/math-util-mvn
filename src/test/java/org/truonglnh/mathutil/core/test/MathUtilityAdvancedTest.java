@@ -21,7 +21,7 @@ public class MathUtilityAdvancedTest {
                                {1, 1},
                                {2, 2},
                                {4, 24},
-                               {6, 7200}};
+                               {6, 72000}};
         return testData;
     }
     
@@ -29,6 +29,6 @@ public class MathUtilityAdvancedTest {
     @ParameterizedTest
     @MethodSource(value = "initTestData")
     public void testFactorialGivenRightArgumentReturnWell(int n, long expected){
-        assertEquals(1, MathUtility.getFactorial(0));
+        assertEquals(expected, MathUtility.getFactorial(n));
     }
 }
